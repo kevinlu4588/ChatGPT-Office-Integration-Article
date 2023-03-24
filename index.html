@@ -1,0 +1,60 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href = "styles.css">
+    
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="title">
+        <h1>ChatGpt</h1>
+        <h2>The AI CHatbot has taken headlines by storm.  
+            Scroll down to see why</h2>
+        <h2> scroll gif</h2>
+      </div>
+    </div>
+    <article>
+        <div class = "q-a-container">
+    <div class="chat-container">
+        <div class="logo">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/ChatGPT_logo.svg/800px-ChatGPT_logo.svg.png" alt="Logo">
+        </div>
+        <div class="text">
+          <h2>Why is chat gpt so popular?</h2>
+        </div>
+        <div class="button">
+          <button  onclick="typer()">Answer</button>
+        </div>
+      </div>
+      <div class="chat-container">
+        <div class="logo">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/ChatGPT_logo.svg/800px-ChatGPT_logo.svg.png" alt="Logo">
+        </div>
+        <div class="text">
+          <h2 id = "demo">Sample Answer.</h2>
+        </div>
+        <div class="button">
+          <button >Get started</button>
+        </div>
+      </div>
+    </div>
+    </article>
+  </body>
+  <script>
+    var i = 0;
+var txt = 'I am popular because of my ability to generate human-like responses and engage in natural conversations with users, thanks to my advanced deep learning architecture and extensive training on a massive dataset of text from the internet. My understanding of context and ability to generate relevant responses make me a valuable tool for a wide range of applications, such as customer service, language translation, and personal assistants. Moreover, my constant learning and improvement through machine learning algorithms allow me to adapt to new scenarios and improve my responses over time.'; /* The text */
+var speed = 50; /* The speed/duration of the effect in milliseconds */
+function typer(){
+    document.getElementById("demo").innerHTML = "";
+    typeWriter();
+}    
+function typeWriter() {
+  if (i < txt.length) {
+    
+    document.getElementById("demo").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+  </script>
+</html>
