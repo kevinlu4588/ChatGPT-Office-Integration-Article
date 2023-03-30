@@ -51,6 +51,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-bottom: 30px;
   }
   .logo {
     flex: 0 0 auto;
@@ -74,3 +75,66 @@
     border-radius: 5px;
     cursor: pointer;
   }
+  img{
+    width: 50%;
+    height:auto;
+  }
+
+  #word-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #text-container{
+    position: absolute;
+    word-wrap: break-word;
+    width: 700px;
+  }
+  #word-text {
+    color: black;
+  }
+
+
+  #title{
+    position: absolute;
+padding-top: 400px;  
+}
+/* Container needed to position the button. Adjust the width as needed */
+.co-pilot-container {
+  position: relative;
+  width:50%;
+}
+#chat1{
+  transition: opacity 3s;
+}
+#title-text{
+  position: absolute;
+  font-size: 30px;
+  font-weight: bold;
+  color: #333333;
+}
+.chatbox{
+  z-index: 3;
+  position: absolute;
+  width: 50%;
+  padding-top: 100px;
+}
+.document{
+  width: 100%;
+  height:auto;
+}
+
+/* Style the button and place it in the middle of the container/image */
+ .chat-button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.sketch{
+  z-index: 4;
+  padding-top: 400px;
+  width: 30%;
+  height:auto;
+  position: absolute;
+}

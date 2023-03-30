@@ -7,51 +7,67 @@
   <body>
     <div class="wrapper">
       <div class="title">
-        <h1>ChatGpt</h1>
-        <h2>The AI Chatbot has taken headlines by storm.  
-            Scroll down to see why</h2>
+        <h1>Microsoft New Co-Pilot Will Revolutionize Your Workspace</h1>
+        <h2>   Scroll down to see why</h2>
         <h2> scroll gif</h2>
       </div>
     </div>
     <article>
-        <div class = "q-a-container">
-    <div class="chat-container">
-        <div class="logo">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/ChatGPT_logo.svg/800px-ChatGPT_logo.svg.png" alt="Logo">
+      <h2>
+        With its recent 1.5 billion investment in OpenAI's ChatGPT,
+        Microsoft is releasing a new co-pilot designed for its office 360 products.
+      </h2>
+      <div id = "word-container">
+        <div class = "text-container" >
+          <p id="word-text">
+            asdf
+          </p>
         </div>
-        <div class="text">
-          <h2>Why is chat gpt so popular?</h2>
+        <img id = "chat1" class = "sketch" src = "sketch-af.png">
+
+        <div id = "title"> 
+          <p id = "title-text">Hohoho </p>
         </div>
-        <div class="button">
-          <button  onclick="typer()">Answer</button>
-        </div>
-      </div>
-      <div class="chat-container">
-        <div class="logo">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/ChatGPT_logo.svg/800px-ChatGPT_logo.svg.png" alt="Logo">
-        </div>
-        <div class="text">
-          <h2 id = "demo">Sample Answer.</h2>
-        </div>
-        <div class="button">
-          <button >Get started</button>
-        </div>
+       
+        <img class = "document" src="word-document.png" alt="word document">
+ 
       </div>
     </div>
     </article>
+
   </body>
   <script>
-    var i = 0;
-var txt = 'I am popular because of my ability to generate human-like responses and engage in natural conversations with users, thanks to my advanced deep learning architecture and extensive training on a massive dataset of text from the internet. My understanding of context and ability to generate relevant responses make me a valuable tool for a wide range of applications, such as customer service, language translation, and personal assistants. Moreover, my constant learning and improvement through machine learning algorithms allow me to adapt to new scenarios and improve my responses over time.'; /* The text */
-var speed = 50; /* The speed/duration of the effect in milliseconds */
+    document.onclick= function(event) {
+    // Compensate for IE<9's non-standard event model
+    //
+    if (event===undefined) event= window.event;
+    var target= 'target' in event? event.target : event.srcElement;
+
+    typer();
+};
+var text = ["OpenAI was founded in December 2015 with an initial funding of $1 billion from its founders, which included Elon Musk, Sam Altman, Greg Brockman, Ilya Sutskever, John Schulman, and Wojciech Zaremba. In February 2018, OpenAI announced that it had raised an additional $1 billion in funding from a group of investors that included Microsoft, Reid Hoffman, and Khosla Ventures. The funding was intended to help OpenAI further its mission of advancing AI in a responsible and safe manner. In 2019, OpenAI raised $1 billion in a new investment round led by Microsoft, with participation from investors such as Reid Hoffman's Greylock Partners, Founders Fund, and Sequoia Capital. The funding was intended to help OpenAI continue its research into artificial intelligence while also ensuring that it is developed in an ethical and responsible way. In June 2020, OpenAI announced that it had raised $100 million in funding from a group of investors led by Greg Brockman, the CEO of OpenAI. Other investors included LinkedIn co-founder Reid Hoffman, Khosla Ventures, and PayPal co-founder Peter Thiel. The funding was intended to help OpenAI expand its team and continue its research efforts."]
+var txt = text[0];
+var i = 0;
+var speed = 30; /* The speed/duration of the effect in milliseconds */
+var spaceCounter = 0;
 function typer(){
-    document.getElementById("demo").innerHTML = "";
+    document.getElementById("word-text").innerHTML = "";
     typeWriter();
+    document.getElementById("chat1").style.opacity = 0;
 }    
 function typeWriter() {
   if (i < txt.length) {
-    
-    document.getElementById("demo").innerHTML += txt.charAt(i);
+    if(txt.charAt(i) == ' '){
+        spaceCounter +=1;
+        if(spaceCounter == 5){
+            spaceCounter = 0;
+            speed = 100;
+        }
+    }
+    else{
+        speed = 30;
+    }
+    document.getElementById("word-text").innerHTML += txt.charAt(i);
     i++;
     setTimeout(typeWriter, speed);
   }
