@@ -2,23 +2,36 @@
   <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href = "styles.css">
-    
+    <link rel="stylesheet" href = "text.css">
+
   </head>
-  <body>
+  <body onLoad = "animIntro()">
     <div class="wrapper">
       <div class="title">
-        <h1>Microsoft New Co-Pilot Will Revolutionize Your Workspace</h1>
+        <h0 id = "hook">
+        </h0>
+        <h1>Microsoft Think's Its New Co-Pilot Will Revolutionize Your Workspace</h1>
         <h2>   Scroll down to see why</h2>
         <h2> scroll gif</h2>
       </div>
     </div>
     <article>
-      <h2>
+      <img src="stock-img.webp">
+      <h2 class =article-text>
         With its recent 1.5 billion investment in OpenAI's ChatGPT,
         Microsoft is releasing a new co-pilot designed for its office 360 products.
       </h2>
+      <div id = "intro-word" class = "article-text">
+        <h1>
+        By utilizing the copilot function available in Microsoft Word, you can benefit from its capabilities to write, edit, summarize, and create documents.  <br>  <br>
+
+With a simple prompt, Copilot generates an initial draft for you and incorporates relevant information from your organization. Copilot has the ability to append content to an existing document, condense text, and rephrase either sections or the entirety of a document to enhance its concision. <br> <br> Furthermore, Copilot can assist you in refining your writing skills by proposing strategies to fortify your arguments and eradicate any inconsistencies.
+
+For example: when it comes to using copilot and asking it to 'Write a summary of Microsoft's investment in OpenAI', it will give us the following response:
+</h1>
+      </div>
       <div id = "word-container">
-        <div class = "text-container" >
+        <div id = "text-container" >
           <p id="word-text">
             asdf
           </p>
@@ -26,7 +39,7 @@
         <img id = "chat1" class = "sketch" src = "sketch-af.png">
 
         <div id = "title"> 
-          <p id = "title-text">Hohoho </p>
+          <p id = "title-text">An Analysis of Microsoft's investment in OpenAI </p>
         </div>
        
         <img class = "document" src="word-document.png" alt="word document">
@@ -45,11 +58,33 @@
 
     typer();
 };
-var text = ["OpenAI was founded in December 2015 with an initial funding of $1 billion from its founders, which included Elon Musk, Sam Altman, Greg Brockman, Ilya Sutskever, John Schulman, and Wojciech Zaremba. In February 2018, OpenAI announced that it had raised an additional $1 billion in funding from a group of investors that included Microsoft, Reid Hoffman, and Khosla Ventures. The funding was intended to help OpenAI further its mission of advancing AI in a responsible and safe manner. In 2019, OpenAI raised $1 billion in a new investment round led by Microsoft, with participation from investors such as Reid Hoffman's Greylock Partners, Founders Fund, and Sequoia Capital. The funding was intended to help OpenAI continue its research into artificial intelligence while also ensuring that it is developed in an ethical and responsible way. In June 2020, OpenAI announced that it had raised $100 million in funding from a group of investors led by Greg Brockman, the CEO of OpenAI. Other investors included LinkedIn co-founder Reid Hoffman, Khosla Ventures, and PayPal co-founder Peter Thiel. The funding was intended to help OpenAI expand its team and continue its research efforts."]
+var text = ["In February 2018, OpenAI announced that it had raised an additional $1 billion in funding from a group of investors that included Microsoft, Reid Hoffman, and Khosla Ventures. The funding was intended to help OpenAI further its mission of advancing AI in a responsible and safe manner. In 2019, OpenAI raised $1 billion in a new investment round led by Microsoft, with participation from investors such as Reid Hoffman's Greylock Partners, Founders Fund, and Sequoia Capital. The funding was intended to help OpenAI continue its research into artificial intelligence while also ensuring that it is developed in an ethical and responsible way. In June 2020, OpenAI announced that it had raised $100 million in funding from a group of investors led by Greg Brockman, the CEO of OpenAI. Other investors included LinkedIn co-founder Reid Hoffman, Khosla Ventures, and PayPal co-founder Peter Thiel. The funding was intended to help OpenAI expand its team and continue its research efforts."]
 var txt = text[0];
+var intro = "How Can I Help?"
 var i = 0;
+var j = 0;
 var speed = 30; /* The speed/duration of the effect in milliseconds */
 var spaceCounter = 0;
+function animIntro(){
+  if (j < intro.length) {
+    if(intro.charAt(j) == ' '){
+        spaceCounter +=1;
+        if(spaceCounter == 5){
+            spaceCounter = 0;
+            speed = 100;
+        }
+    }
+    else{
+        speed = 30;
+    }
+    document.getElementById("hook").innerHTML += intro.charAt(j);
+    j++;
+    setTimeout(animIntro, speed);
+  }
+
+}
+
+
 function typer(){
     document.getElementById("word-text").innerHTML = "";
     typeWriter();

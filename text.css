@@ -1,0 +1,23 @@
+.article-text{
+    margin: auto;
+    text-align: center;
+    word-wrap: break-word;
+    width: 1500px;
+}
+h0 {
+    font-size: 100px;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 20px;
+  }
+
+  #hook::after {
+    content: '|';
+    margin-left: 5px;
+    animation: blink 0.7s infinite;
+  }
+  
+  @keyframes blink {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+  }
