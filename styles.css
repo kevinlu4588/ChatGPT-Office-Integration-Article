@@ -112,6 +112,9 @@ padding-right: 50px;
 #chat1{
   transition: opacity 3s;
 }
+#chat2{
+  transition: opacity 3s;
+}
 #title-text{
   position: absolute;
   font-size: 30px;
@@ -125,18 +128,56 @@ padding-right: 50px;
   padding-top: 100px;
 }
 .document{
-  width: 100%;
+  width: 80%;
   height:auto;
 }
 
 .sketch{
   z-index: 4;
   padding-top: 400px;
-  width: 50%;
+  width: 40%;
   height:auto;
   position: absolute;
 }
+
 body{
 background: linear-gradient(135deg, #33E9FF, #9C5BDD);
 }
 
+#captioned{
+  position: relative;
+  width: 40%;
+  height:auto;
+  padding-right: 30px;
+}
+
+.article-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+
+}
+
+
+#outlook-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#down{
+  width: 10%;
+}
+
+#outlook-box{
+  z-index: 3;
+  padding-left: 250px;
+  padding-top: 500px;
+  position: absolute;
+  word-wrap: break-word;
+  width: 900px;
+  
+}
+#email-text{
+}

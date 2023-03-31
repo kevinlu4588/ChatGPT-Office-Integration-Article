@@ -21,3 +21,8 @@ h0 {
     0% { opacity: 1; }
     100% { opacity: 0; }
   }
+  .intro-text{
+    padding-left: 40px;
+    word-wrap: break-word;
+    width: 600px;
+  }
