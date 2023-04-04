@@ -179,5 +179,13 @@ background: linear-gradient(135deg, #33E9FF, #9C5BDD);
   width: 900px;
   
 }
+
+#gibberish{
+  background-color: rgb(208, 217, 113);
+}
+
+#originality{
+  background-color:rgb(127, 219, 159)
+}
 #email-text{
 }
