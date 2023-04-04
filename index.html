@@ -1,60 +1,39 @@
-<html>
-  <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href = "styles.css">
-    
-  </head>
-  <body>
-    <div class="wrapper">
-      <div class="title">
-        <h1>ChatGpt</h1>
-        <h2>The AI Chatbot has taken headlines by storm.  
-            Scroll down to see why</h2>
-        <h2> scroll gif</h2>
-      </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
+</head>
+<body>
+
+<div class="jumbotron text-center">
+  <h1>My First Bootstrap Page</h1>
+  <p>Resize this responsive page to see the effect!</p> 
+</div>
+  
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <h3>Column 1</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
     </div>
-    <article>
-        <div class = "q-a-container">
-    <div class="chat-container">
-        <div class="logo">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/ChatGPT_logo.svg/800px-ChatGPT_logo.svg.png" alt="Logo">
-        </div>
-        <div class="text">
-          <h2>Why is chat gpt so popular?</h2>
-        </div>
-        <div class="button">
-          <button  onclick="typer()">Answer</button>
-        </div>
-      </div>
-      <div class="chat-container">
-        <div class="logo">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/ChatGPT_logo.svg/800px-ChatGPT_logo.svg.png" alt="Logo">
-        </div>
-        <div class="text">
-          <h2 id = "demo">Sample Answer.</h2>
-        </div>
-        <div class="button">
-          <button >Get started</button>
-        </div>
-      </div>
+    <div class="col-sm-4">
+      <h3>Column 2</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
     </div>
-    </article>
-  </body>
-  <script>
-    var i = 0;
-var txt = 'I am popular because of my ability to generate human-like responses and engage in natural conversations with users, thanks to my advanced deep learning architecture and extensive training on a massive dataset of text from the internet. My understanding of context and ability to generate relevant responses make me a valuable tool for a wide range of applications, such as customer service, language translation, and personal assistants. Moreover, my constant learning and improvement through machine learning algorithms allow me to adapt to new scenarios and improve my responses over time.'; /* The text */
-var speed = 50; /* The speed/duration of the effect in milliseconds */
-function typer(){
-    document.getElementById("demo").innerHTML = "";
-    typeWriter();
-}    
-function typeWriter() {
-  if (i < txt.length) {
-    
-    document.getElementById("demo").innerHTML += txt.charAt(i);
-    i++;
-    setTimeout(typeWriter, speed);
-  }
-}
-  </script>
+    <div class="col-sm-4">
+      <h3>Column 3</h3>        
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    </div>
+  </div>
+</div>
+
+</body>
 </html>
