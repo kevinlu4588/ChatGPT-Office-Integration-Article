@@ -1,0 +1,15 @@
+#word-doc{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+.word-container {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+
+.word-doc-copilot {
+    position: absolute;
+    z-index: -1;
+  }
