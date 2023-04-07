@@ -2,6 +2,7 @@
     position: absolute;
     left: 0px;
     top: 0px;
+    z-index: -1;
 }
 .word-container {
     position: relative;
@@ -9,7 +10,33 @@
     left: 0;
   }
 
-.word-doc-copilot {
+#word-doc-copilot {
     position: absolute;
     z-index: -1;
   }
+
+#word-intro{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.word-crit{
+    background-color: #ba80ce;
+    height: 400px;
+    width:500px;
+    white-space: normal;
+}
+
+.round-corner {
+    -webkit-border-radius: 5px 5px 5px 5px; 
+    -moz-border-radius: 5px 5px 5px 5px;
+    -o-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+ }
+
+.word-crit-text{
+    padding-top: 30%;
+    text-align: center;
+    vertical-align: middle;
+    color: rgb(7, 7, 7);
+}
