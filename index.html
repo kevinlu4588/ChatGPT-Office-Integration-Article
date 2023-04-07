@@ -1,58 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>Bootstrap Example</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="title.css">
-  <link rel="stylesheet" href="word-document.css">
-
-</head>
-<body>
-
-<div class="jumbotron text-center" id = "title-div">
-  <h1>How Can I Help? => How Can I Hurt?</h1>
-  <p>How Microsoft's New Co-pilot Poses Risks for Workspaces</p> 
-</div>
-  
-<div class="container">
-  <div class="row">
-    <div class="col-lg-4">  
-      <h3 class="text-left">
-        ChatGPT opened to the public on November 30, 2022. The AI chat machine, backed by Microsoft as an investor, has attracted a lot of attention since its launch. In its first two months, ChatGPT was used by more than 100 million users, giving Microsoft a glimpse of how ChatGPT could play an important role in the future of our daily lives.
-                  Microsoft made an announcement on their website on March 16, 2023, stating that they plan to incorporate ChatGPT into their office software in the coming days. <br> <br> The program will be called 
-                  Microsoft 365 Copilot, which combines Large Language Models (LLMs) with business data and Microsoft 
-                  365 applications.
-      </h3>
-    </div>
-    <div class="col-lg-8"  style="padding-left: 0px;  padding-right: 0px;">
-      <img src = "pics/copilot.jpg" class="img-responsive" alt="Responsive image">
+   <head>
+      <title>Bootstrap Example</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
+      <link rel="stylesheet" href="styles.css">
+      <link rel="stylesheet" href="title.css">
+      <link rel="stylesheet" href="word-document.css">
+      <link rel="stylesheet" href="main.css">
+      <link rel="stylesheet" href="scrollama.css">
+      <script src="https://unpkg.com/scrollama"></script>
       
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-lg-12">  
-      <h4>
-        The Copilot is powered by OpenAI’s GPT-4 technology and will feature in the sidebar as a chatbot in 
-                  Microsoft 365 apps. It aims to boost productivity, creativity, and skills by transforming words into a potent productivity tool. Microsoft 365 Copilot is 
-                  not just a novel work methodology, but a tool to revolutionize productivity.
-      </h4>
-    </div>
-  </div>
-  <div class = "row">
-    <div class = "col-lg-6">
-      <img src = "pics/word-document.png" class="img-responsive" alt="Responsive image" id="word-doc">
-      <img src = "pics/co-pilot.webp" class="img-responsive" alt="Responsive image" id = "word-doc-copilot">
+      <script src="https://unpkg.com/d3@5.9.1/dist/d3.min.js"></script>
+   </head>
+   <body>
+      <div class="jumbotron bg-white text-white text-center" style = "background: #000000">
+         <h1 class = "text-white">How Can I Help? => How Can I Hurt?</h1>
+         <h3 class = "title-text">How Microsoft's New Co-pilot Poses Risks for Workspaces</h3>
+      </div>
+      <div class="container">
+      <div class="row">
+         <div class="col-lg-4">
+            <h3 class="text-left">
+               ChatGPT opened to the public on November 30, 2022. The AI chat machine, backed by Microsoft as an investor, has attracted a lot of attention since its launch. In its first two months, ChatGPT was used by more than 100 million users, giving Microsoft a glimpse of how ChatGPT could play an important role in the future of our daily lives.
+               Microsoft made an announcement on their website on March 16, 2023, stating that they plan to incorporate ChatGPT into their office software in the coming days. <br> <br> Microsoft has bet the farm on ChatGPT, having missed out on countless other trends.  In the pursuit of producing a new product as quickly as possible, Microsoft has fired its ethics team...
+            </h3>
+         </div>
+         <div class="col-lg-8"  style="padding-left: 0px;  padding-right: 0px;">
+            <img src = "pics/copilot.jpg" class="img-responsive" alt="Responsive image">
+         </div>
+      </div>
+      <div class="row">
 
-    </div>
+
+         <div class="col-lg-12">
+            <h4>
+               The Copilot is powered by OpenAI’s GPT-4 technology and will feature in the sidebar as a chatbot in 
+               Microsoft 365 apps. It aims to boost productivity, creativity, and skills by transforming words into a potent productivity tool. Microsoft 365 Copilot is 
+               not just a novel work methodology, but a tool to revolutionize productivity.
+            </h4>
+         </div>
+         <div class="col-lg-8 col-lg-offset-2" id = "word-intro">
+          <h3>
+            When used with Word products, Copilot write, edit, summarize, and create documents.
+
+            But watchout: Copilot, like many LLM's, is not a perfect tool. Scroll down to see a co-pilot simulation of a Word document.
+          </h3>
+       </div>
+      </div>
+      
+      <main>
+        <div class = "row">
+          <section id="scrolly">
+            <div class = "col-lg-6">
+            <article>
+              <div class="step is-active" data-step="1" style="height: 735px;" data-scrollama-index="0">
+                <div class = "word-crit">
+                  <p class = "word-crit-text"> Bias: There are concerns that Copilot may perpetuate biases and inequalities in the software development industry. This is because the tool is trained on existing code, which may have implicit biases or discriminatory patterns.</p>
+                </div>
+              </div>
+              <div class="step" data-step="2" style="height: 735px;" data-scrollama-index="1">
+                <p>CoPilot cannot understand jackshit</p>
+              </div>
+            </article>
+          </div>
+          <div class = "col-lg-6 ">
+            <div class = "sticky-top">
+            <figure style="height: 490px; top: 245px;" class = "fig">
+              <div class = "chart">
+                <img src = "pics/word-document.png" class="img-responsive" alt="Responsive image" id="word-doc">
+                <img src = "pics/co-pilot.webp" class="img-responsive" alt="Responsive image" id = "word-doc-copilot">
+             </div>
+            </figure>
+          </div>
+          </div>
+          </section>
+        </div>
+      </main>
+      <script>
+        // using d3 for convenience
+        var main = d3.select("main");
+        var scrolly = main.select("#scrolly");
+        var figure = scrolly.select("figure");
+        var article = scrolly.select("article");
+        var step = article.selectAll(".step");
     
-
-  </div>
-</div>
-
-</body>
+        // initialize the scrollama
+        var scroller = scrollama();
+    
+    
+        // scrollama event handlers
+        function handleStepEnter(response) {
+          console.log(response);
+          // response = { element, direction, index }
+    
+          // add color to current step only
+          step.classed("is-active", function (d, i) {
+            return i === response.index;
+          });
+    
+          // update graphic based on step
+          
+        }
+    
+        function init() {
+    
+    
+          // 2. setup the scroller passing options
+          // 		this will also initialize trigger observations
+          // 3. bind scrollama event handlers (this can be chained like below)
+          scroller
+            .setup({
+              step: "#scrolly article .step",
+              offset: 0.33,
+              debug: false
+            })
+            .onStepEnter(handleStepEnter);
+        }
+    
+        // kick things off
+        init();
+      </script>
+   </body>
 </html>
