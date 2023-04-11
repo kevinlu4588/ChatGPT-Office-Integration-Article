@@ -2,8 +2,8 @@
       body {
         margin: 0;
         padding: 0;
-        background: linear-gradient(135deg, #33E9FF, #9C5BDD);
-      }
+      background-color: #6B8393;      
+    }
       .wrapper {
         display: flex;
         justify-content: center;
@@ -12,34 +12,56 @@
       }
 
   h1 {
-    font-size: 36px;
+    font: 'Work Sans';
+        font-size: 36px;
     font-weight: bold;
     margin-bottom: 20px;
   }
   h2 {
+    font: 'Work Sans';
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 10px;
   }
   h3{
-    font-size: 18px;
-    font-weight: bold;
+    font: 'Work Sans';
+    font-size: 15px;
     margin-bottom: 10px;
+    line-height: 40px;
   }
   h4{
+    font: 'Work Sans';
     font-size: 16px;
     margin-bottom: 10px;
   }
   p {
+    font: 'Work Sans';
+
     font-size: 16px;
-    line-height: 1.5;
     color: #666666;
     margin-bottom: 30px;
+  }
+  .span{
+    font: 'Work Sans';
+
   }
 figure{
   position:sticky;
 }
 
 .text-white{
+
+}
+
+.text-left{
+  white-space: normal;
+  padding-left: 5%;
+  padding-right: 5%;
+
+}
+
+#conclusion{
+padding-top: 400px;
+padding-bottom: 100px;
 
 }

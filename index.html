@@ -6,123 +6,200 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
       <link rel="stylesheet" href="styles.css">
       <link rel="stylesheet" href="title.css">
       <link rel="stylesheet" href="word-document.css">
       <link rel="stylesheet" href="main.css">
       <link rel="stylesheet" href="scrollama.css">
       <script src="https://unpkg.com/scrollama"></script>
-      
       <script src="https://unpkg.com/d3@5.9.1/dist/d3.min.js"></script>
+      <style>
+         .jumbotron {
+         background: linear-gradient(180deg, #97519A, #536285) !important;
+         background-size: cover;
+         }
+      </style>
    </head>
    <body>
-      <div class="jumbotron bg-white text-white text-center" style = "background: #000000">
+      <div class="jumbotron bg-blue text-white text-center" id = "intro" style = "background: #000000">
          <h1 class = "text-white">How Can I Help? => How Can I Hurt?</h1>
          <h3 class = "title-text">How Microsoft's New Co-pilot Poses Risks for Workspaces</h3>
       </div>
       <div class="container">
       <div class="row">
-         <div class="col-lg-4">
-            <h3 class="text-left">
-               ChatGPT opened to the public on November 30, 2022. The AI chat machine, backed by Microsoft as an investor, has attracted a lot of attention since its launch. In its first two months, ChatGPT was used by more than 100 million users, giving Microsoft a glimpse of how ChatGPT could play an important role in the future of our daily lives.
-               Microsoft made an announcement on their website on March 16, 2023, stating that they plan to incorporate ChatGPT into their office software in the coming days. <br> <br> Microsoft has bet the farm on ChatGPT, having missed out on countless other trends.  In the pursuit of producing a new product as quickly as possible, Microsoft has fired its ethics team...
-            </h3>
+         <div class="col-lg-6 col-lg-offset-1" >
+            <div class = "text-back">
+               <h1 class = "text-left">
+                  Betting the Farm on ChatGPT
+               </h1>
+            </div>
+            <div class = "text-back">
+               <h3 class="text-left" >
+                  ChatGPT opened to the public on November 30, 2022. The AI chat machine, backed by Microsoft as an investor, has attracted a lot of attention since its launch. In its first two months, ChatGPT was used by more than 100 million users, giving Microsoft a glimpse of how ChatGPT could play an important role in the future of our daily lives.
+                  Microsoft made an announcement on their website on March 16, 2023, stating that they plan to incorporate ChatGPT into their office software in the coming days. <br> <br> Microsoft has bet the farm on ChatGPT, having missed out on countless other trends.  In the pursuit of producing a new product as quickly as possible, Microsoft has fired its ethics team...
+               </h3>
+            </div>
          </div>
-         <div class="col-lg-8"  style="padding-left: 0px;  padding-right: 0px;">
+         <div class="col-lg-5"  style="padding-left: 0px;  padding-right: 0px;">
             <img src = "pics/copilot.jpg" class="img-responsive" alt="Responsive image">
          </div>
       </div>
       <div class="row">
-
-
-         <div class="col-lg-12">
-            <h4>
-               The Copilot is powered by OpenAI’s GPT-4 technology and will feature in the sidebar as a chatbot in 
-               Microsoft 365 apps. It aims to boost productivity, creativity, and skills by transforming words into a potent productivity tool. Microsoft 365 Copilot is 
-               not just a novel work methodology, but a tool to revolutionize productivity.
-            </h4>
-         </div>
          <div class="col-lg-8 col-lg-offset-2" id = "word-intro">
-          <h3>
-            When used with Word products, Copilot write, edit, summarize, and create documents.
-
-            But watchout: Copilot, like many LLM's, is not a perfect tool. Scroll down to see a co-pilot simulation of a Word document.
-          </h3>
-       </div>
+            <div class = "text-back">
+               <h1 class = "text-left">
+                  Word Document Simulation
+               </h1>
+            </div>
+            <div class = "text-back">
+               <h3 class = "text-left">
+                  When used with Word products, Copilot write, edit, summarize, and create documents.
+                  But watchout: Copilot, like many LLM's, is not a perfect tool. Scroll down to see a co-pilot simulation of a Word document.
+               </h3>
+            </div>
+         </div>
       </div>
-      
       <main>
-        <div class = "row">
-          <section id="scrolly">
-            <div class = "col-lg-6">
-            <article>
-              <div class="step is-active" data-step="1" style="height: 735px;" data-scrollama-index="0">
-                <div class = "word-crit">
-                  <p class = "word-crit-text"> Bias: There are concerns that Copilot may perpetuate biases and inequalities in the software development industry. This is because the tool is trained on existing code, which may have implicit biases or discriminatory patterns.</p>
-                </div>
-              </div>
-              <div class="step" data-step="2" style="height: 735px;" data-scrollama-index="1">
-                <p>CoPilot cannot understand jackshit</p>
-              </div>
-            </article>
-          </div>
-          <div class = "col-lg-6 ">
-            <div class = "sticky-top">
-            <figure style="height: 490px; top: 245px;" class = "fig">
-              <div class = "chart">
-                <img src = "pics/word-document.png" class="img-responsive" alt="Responsive image" id="word-doc">
-                <img src = "pics/co-pilot.webp" class="img-responsive" alt="Responsive image" id = "word-doc-copilot">
+         <div class = "row ">
+            <section id="scrolly">
+               <div class = "sticky-top" id = "wordy">
+                  <div class = "col-lg-6 ">
+                     <figure style="height: 490px; top: 245px;" class = "fig">
+                        <div class = "chart">
+                           <img src = "pics/word-document.png" class="img-responsive" alt="Responsive image" id="word-doc">
+                           <img src = "pics/co-pilot.webp" class="img-responsive" alt="Responsive image" id = "word-doc-copilot">
+                           <p class = "word-text">
+                              <span id = "demo"></span>
+                              <span id = "word-bias-text"></span>
+                              <span id = "demo1"></span>
+                              <span id = "word-security-text"></span>
+                              <span id = "demo2"></span>
+                              <!-- going to be filled in with copilot text -->
+                           </p>
+                        </div>
+                     </figure>
+                  </div>
+               </div>
+               <div class = "col-lg-6">
+                  <article>
+                     <div class="step is-active" data-step="1" style="height: 735px;" data-scrollama-index="0">
+                      <div class = "word-crit">
+                        <p class = "word-crit-text">TThere are concerns that Copilot may perpetuate biases and inequalities in the software development industry. This is because the tool is trained on existing code, which may have implicit biases or discriminatory patterns.</p>
+                     </div>
+                    </div>
+                     <div class="step" data-step="2" style="height: 735px;" data-scrollama-index="1">
+                        <div class = "word-crit">
+                           <p class = "word-crit-text"> <mark> Bias: </mark> There are concerns that Copilot may perpetuate biases and inequalities in the software development industry. This is because the tool is trained on existing code, which may have implicit biases or discriminatory patterns.</p>
+                        </div>
+                     </div>
+                     <div class = "word-crit">
+                        <div class="step" data-step="3" style="height: 735px;" data-scrollama-index="2">
+                           <p class = "word-crit-text"><span class = "yellow">Security and privacy: </span> There are concerns about the security and privacy of the code written using Copilot. As the tool operates by analyzing and synthesizing code written by other developers, it raises concerns about who has access to the code.</p>
+                        </div>
+                     </div>
+                  </article>
+               </div>
+            </section>
+         </div>
+         <div class = "row">
+            <div class="col-lg-8 col-lg-offset-2" id = "conclusion">
+              <div class = "text-back">
+                <h1 class = "text-left">
+                   Word Document Simulation
+                </h1>
              </div>
-            </figure>
-          </div>
-          </div>
-          </section>
-        </div>
+             <div class = "text-back">
+                <h3 class = "text-left">
+                  Currently, the co-pilot feature is solely accessible on five products owned by Microsoft. Undoubtedly, integrating a co-pilot tool in our workflow can significantly enhance our productivity, efficiency, and overall user experience. Nevertheless, there are numerous intricacies, such as design, language, and functionality that require further refinement before the tool can become fully operational.
+                  Looking towards the future, advancements in Artificial Intelligence (AI), like ChatGPT, hold the potential to revolutionize our daily lives. We could potentially see a shift away from traditional text input towards more intuitive voice and AI interactions. However, until such innovations become mainstream, we should remain vigilant of potential unexpected developments beyond our current understanding.
+                </h3>
+             </div>
+         </div>
       </main>
       <script>
-        // using d3 for convenience
-        var main = d3.select("main");
-        var scrolly = main.select("#scrolly");
-        var figure = scrolly.select("figure");
-        var article = scrolly.select("article");
-        var step = article.selectAll(".step");
-    
-        // initialize the scrollama
-        var scroller = scrollama();
-    
-    
-        // scrollama event handlers
-        function handleStepEnter(response) {
-          console.log(response);
-          // response = { element, direction, index }
-    
-          // add color to current step only
-          step.classed("is-active", function (d, i) {
-            return i === response.index;
-          });
-    
-          // update graphic based on step
-          
-        }
-    
-        function init() {
-    
-    
-          // 2. setup the scroller passing options
-          // 		this will also initialize trigger observations
-          // 3. bind scrollama event handlers (this can be chained like below)
-          scroller
-            .setup({
-              step: "#scrolly article .step",
-              offset: 0.33,
-              debug: false
-            })
-            .onStepEnter(handleStepEnter);
-        }
-    
-        // kick things off
-        init();
+         // using d3 for convenience
+         var main = d3.select("main");
+         var scrolly = main.select("#scrolly");
+         var figure = scrolly.select("figure");
+         var article = scrolly.select("article");
+         var step = article.selectAll(".step");
+         
+         // initialize the scrollama
+         var scroller = scrollama();
+         
+         
+         // scrollama event handlers
+         function handleStepEnter(response) {
+           console.log(response);
+           // response = { element, direction, index }
+         
+           // add color to current step only
+           step.classed("is-active", function (d, i) {
+             return i === response.index;
+           });
+         
+           // update graphic based on step
+           if(response.index == 0){
+             typeWriter();
+           }
+           else if(response.index == 1){
+             document.getElementById("word-bias-text").style.backgroundColor = "red";
+         
+           }
+           else if(response.index == 2){
+             document.getElementById("word-security-text").style.backgroundColor = "yellow";
+            // document.getElementById("wordy").style.position = "absolute";
+           }
+           figure.select("#word-doc-copilot").style("opacity", 0);
+           figure.select()
+         }
+           var i = 0;
+           var txt = 'OpenAI was founded in December 2015 with an initial funding of $1 billion from its founders, which included Elon Musk, Sam Altman, Greg Brockman, Ilya Sutskever, John Schulman, and Wojciech Zaremba.";'
+           + "In February 2018, OpenAI announced that it had raised an additional $1 billion in funding from a group of investors that included Microsoft, Reid Hoffman, and Khosla Ventures. The funding was intended to help OpenAI further its mission of advancing AI in a responsible and safe manner."; /* The text */
+           var speed = 100; /* The speed/duration of the effect in milliseconds */
+         function typeWriter() {
+             if (i < txt.length) {
+               if(i <= 50){
+                 document.getElementById("demo").innerHTML += txt.charAt(i);
+               }
+               else
+               if(i <= 70){
+                 document.getElementById("word-bias-text").innerHTML += txt.charAt(i);
+               }
+               else if(i <= 90){
+                 document.getElementById("demo1").innerHTML += txt.charAt(i);
+               }
+               else if(i <= 111){
+                 document.getElementById("word-security-text").innerHTML += txt.charAt(i);
+               }
+               else{
+                 document.getElementById("demo2").innerHTML += txt.charAt(i);
+         
+               }
+               i++;
+               setTimeout(typeWriter, speed);
+             }
+           }
+         
+         function init() {
+         
+         
+           // 2. setup the scroller passing options
+           // 		this will also initialize trigger observations
+           // 3. bind scrollama event handlers (this can be chained like below)
+           scroller
+             .setup({
+               step: "#scrolly article .step",
+               offset: 0.33,
+               debug: false
+             })
+             .onStepEnter(handleStepEnter);
+         }
+         
+         // kick things off
+         init();
       </script>
    </body>
 </html>

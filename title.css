@@ -1,5 +1,6 @@
 .title-div{
-    background-color: black;
+    background: linear-gradient(135deg, #33E9FF, #9C5BDD);
+    
 }
 .title {
 display: flex;
@@ -10,7 +11,22 @@ max-width: 800px;
 margin: 0 auto;
 }
 
+.jumbotron{
+    background-color: #536285 !important;
+}
+
 
 .title-text{
     color: white;
+}
+
+.text-back{
+    background-color: #9BB8CC;
+    line-height: 100px;
+
+}
+
+#intro{
+    padding-top: 450px;
+    padding-bottom: 450px;
 }

@@ -13,7 +13,9 @@
 #word-doc-copilot {
     position: absolute;
     z-index: -1;
+    transition: opacity 3s;
   }
+  
 
 #word-intro{
     padding-top: 100px;
@@ -21,7 +23,7 @@
 }
 
 .word-crit{
-    background-color: #ba80ce;
+    background-color: #9BB8CC;
     height: 400px;
     width:500px;
     white-space: normal;
@@ -36,7 +38,42 @@
 
 .word-crit-text{
     padding-top: 30%;
-    text-align: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    text-align: left;
     vertical-align: middle;
     color: rgb(7, 7, 7);
+}
+.chart{
+    text-align: left;
+    vertical-align: middle;
+
+}
+
+.yellow{
+    background-color: yellow;
+}
+
+.word-text{
+    padding-top: 30%;
+    padding-left: 20%;
+    word-wrap: break-word;
+    width: 500px;
+}
+
+#bias-text{
+    background-color: yellow;
+}
+
+mark{
+    background-color: rgb(232, 51, 51);
+}
+
+#word-bias-text{
+    color: black;
+    transition: background-color 3s;
+}
+#word-security-text{
+    color: black;
+    transition: background-color 3s;
 }
