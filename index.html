@@ -93,12 +93,12 @@
                   <article>
                      <div class="step is-active" data-step="1" style="height: 500px;" data-scrollama-index="0">
                         <div class = "word-crit">
-                           <p class = "word-crit-text">There are concerns that Copilot may perpetuate biases and inequalities in the software development industry. This is because the tool is trained on existing code, which may have implicit biases or discriminatory patterns.</p>
+                           <p class = "word-crit-text">There are concerns that Copilot may perpetuate<a href="https://www.ie.edu/insights/articles/unpacking-chatgpt-the-pros-and-cons-of-ais-hottest-language-model/"> biases and inequalities </a> in the software development industry. This is because the tool is trained on existing code, which may have implicit biases or discriminatory patterns.</p>
                         </div>
                      </div>
                      <div class="step" data-step="2" style="height: 500px;" data-scrollama-index="1">
                         <div class = "word-crit">
-                           <p class = "word-crit-text"> <mark> Bias: </mark> There are concerns that Copilot may perpetuate biases and inequalities in the software development industry. This is because the tool is trained on existing code, which may have implicit biases or discriminatory patterns.</p>
+                           <p class = "word-crit-text"> <mark> Bias: </mark> There are concerns that Copilot may perpetuate <a href="https://manhattan.institute/article/new-report-finds-bias-in-chatgpt">biases and inequalities </a> in the software development industry. This is because the tool is trained on existing code, which may have implicit biases or discriminatory patterns.</p>
                         </div>
                      </div>
                      <div class = "word-crit">
@@ -171,7 +171,7 @@
             </section>
          </div>
          <div class = "row">
-         <div class="col-lg-8 col-lg-offset-2" id = "conclusion">
+         <div class="col-lg-6" id = "conclusion">
             <div class = "text-back">
                <h1 class = "text-left">
                   The Future Of CoPilot
@@ -214,7 +214,7 @@ function handleStepEnter(response) {
     typeWriter();
   }
   else if(response.index == 1){
-   document.getElementById("word-bias-text").style.border = "1px solid #FF0000;"
+   document.getElementById("word-bias-text").style.backgroundColor = "rgb(208, 100, 100)";
   }
   else if(response.index == 2){
    console.log("hi 2");
@@ -232,10 +232,10 @@ function typeWriter() {
         document.getElementById("demo").innerHTML += txt.charAt(i);
       }
       else
-      if(i <= 70){
+      if(i <= 73){
         document.getElementById("word-bias-text").innerHTML += txt.charAt(i);
       }
-      else if(i <= 90){
+      else if(i <= 100){
         document.getElementById("demo1").innerHTML += txt.charAt(i);
       }
       else if(i <= 111){
@@ -307,7 +307,7 @@ document.getElementById("word-security-text").style.backgroundColor = "yellow";
 var i = 0;
 var txt = 'OpenAI was founded in December 2015 with an initial funding of $1 billion from its founders, which included Elon Musk, Sam Altman, Greg Brockman, Ilya Sutskever, John Schulman, and Wojciech Zaremba.";'
 + "In February 2018, OpenAI announced that it had raised an additional $1 billion in funding from a group of investors that included Microsoft, Reid Hoffman, and Khosla Ventures. The funding was intended to help OpenAI further its mission of advancing AI in a responsible and safe manner."; /* The text */
-var speed = 100; /* The speed/duration of the effect in milliseconds */
+var speed = 40; /* The speed/duration of the effect in milliseconds */
 function typeWriter() {
 if (i < txt.length) {
 if(i <= 50){
