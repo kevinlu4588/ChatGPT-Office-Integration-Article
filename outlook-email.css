@@ -1,0 +1,17 @@
+#outlook-intro{
+    padding-top: 800px;
+    padding-bottom: 100px;
+}
+
+#outlook-email{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+}
+
+#outlook-copilot {
+    position: absolute;
+    z-index: -1;
+    transition: opacity 3s;
+  }

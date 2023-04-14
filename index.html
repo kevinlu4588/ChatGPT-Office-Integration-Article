@@ -13,8 +13,11 @@
       <link rel="stylesheet" href="word-document.css">
       <link rel="stylesheet" href="main.css">
       <link rel="stylesheet" href="scrollama.css">
+      <link rel="stylesheet" href="outlook-email.css">
       <script src="https://unpkg.com/scrollama"></script>
       <script src="https://unpkg.com/d3@5.9.1/dist/d3.min.js"></script>
+      <script src = "scrollama.js"></script>
+      <script src = "typewriter.js"></script>
       <style>
          .jumbotron {
          background: linear-gradient(180deg, #97519A, #536285) !important;
@@ -22,14 +25,14 @@
          }
       </style>
    </head>
-   <body>
+   <body onload="articleIntro()">
       <div class="jumbotron bg-blue text-white text-center" id = "intro" style = "background: #000000">
-         <h1 class = "text-white">How Can I Help? => How Can I Hurt?</h1>
+         <h1 id = "intro-title" class = "text-white"></h1>
          <h3 class = "title-text">How Microsoft's New Co-pilot Poses Risks for Workspaces</h3>
       </div>
       <div class="container">
       <div class="row">
-         <div class="col-lg-6 col-lg-offset-1" >
+         <div class="col-lg-6 col-lg-offset-1 article-intro">
             <div class = "text-back">
                <h1 class = "text-left">
                   Betting the Farm on ChatGPT
@@ -38,26 +41,30 @@
             <div class = "text-back">
                <h3 class="text-left" >
                   ChatGPT opened to the public on November 30, 2022. The AI chat machine, backed by Microsoft as an investor, has attracted a lot of attention since its launch. In its first two months, ChatGPT was used by more than 100 million users, giving Microsoft a glimpse of how ChatGPT could play an important role in the future of our daily lives.
-                  Microsoft made an announcement on their website on March 16, 2023, stating that they plan to incorporate ChatGPT into their office software in the coming days. <br> <br> Microsoft has bet the farm on ChatGPT, having missed out on countless other trends.  In the pursuit of producing a new product as quickly as possible, Microsoft has fired its ethics team...
+                  <br> <br> As Microsoft is introducing its contentious AI tools into the mainstream, their recent decision to prioritize the deployment of these products ahead of the competition raises concerns about their lack of emphasis on long-term, socially responsible considerations. While teams like Microsoft's Ethics and Society department typically serve as a check on big tech firms by identifying potential social or legal repercussions, their absence could leave AI vulnerable to significant societal harm.
                </h3>
             </div>
          </div>
-         <div class="col-lg-5"  style="padding-left: 0px;  padding-right: 0px;">
+         <div class="col-lg-5 article-intro"  style="padding-left: 0px;  padding-right: 0px;">
             <img src = "pics/copilot.jpg" class="img-responsive" alt="Responsive image">
          </div>
       </div>
       <div class="row">
-         <div class="col-lg-8 col-lg-offset-2" id = "word-intro">
-            <div class = "text-back">
-               <h1 class = "text-left">
-                  Word Document Simulation
-               </h1>
-            </div>
-            <div class = "text-back">
-               <h3 class = "text-left">
-                  When used with Word products, Copilot write, edit, summarize, and create documents.
-                  But watchout: Copilot, like many LLM's, is not a perfect tool. Scroll down to see a co-pilot simulation of a Word document.
-               </h3>
+         <div class = "sticky-top">
+            <div class="col-lg-6 col-lg-offset-1 " id = "word-intro">
+               <div class = "text-back">
+                  <h1 class = "text-left">
+                     Word Document Simulation
+                  </h1>
+               </div>
+               <div class = "text-back">
+                  <h3 class = "text-left">
+                     By utilizing the copilot function available in Microsoft Word, you can benefit from its capabilities to write, edit, summarize, and create documents.
+                     With a simple prompt, Copilot generates an initial draft for you and incorporates relevant information from your organization. Copilot has the ability to append content to an existing document, condense text, and rephrase either sections or the entirety of a document to enhance its concision. Furthermore, Copilot can assist you in refining your writing skills by proposing strategies to fortify your arguments and eradicate any inconsistencies.
+                     <br> <br>  Although the Microsoft copilot is expected to provide exceptional versatility, it has the possibility of producing prejudiced replies due to inherent biases and prejudices in the text data that ChatGPT is trained on. Therefore, it is possible that the AI may generate biased or discriminatory responses unknowingly.
+                     For example: when it comes to using copilot and asking copilot to summarize the funding history of OpenAI
+                  </h3>
+               </div>
             </div>
          </div>
       </div>
@@ -84,18 +91,78 @@
                </div>
                <div class = "col-lg-6">
                   <article>
-                     <div class="step is-active" data-step="1" style="height: 735px;" data-scrollama-index="0">
-                      <div class = "word-crit">
-                        <p class = "word-crit-text">TThere are concerns that Copilot may perpetuate biases and inequalities in the software development industry. This is because the tool is trained on existing code, which may have implicit biases or discriminatory patterns.</p>
+                     <div class="step is-active" data-step="1" style="height: 500px;" data-scrollama-index="0">
+                        <div class = "word-crit">
+                           <p class = "word-crit-text">There are concerns that Copilot may perpetuate biases and inequalities in the software development industry. This is because the tool is trained on existing code, which may have implicit biases or discriminatory patterns.</p>
+                        </div>
                      </div>
-                    </div>
-                     <div class="step" data-step="2" style="height: 735px;" data-scrollama-index="1">
+                     <div class="step" data-step="2" style="height: 500px;" data-scrollama-index="1">
                         <div class = "word-crit">
                            <p class = "word-crit-text"> <mark> Bias: </mark> There are concerns that Copilot may perpetuate biases and inequalities in the software development industry. This is because the tool is trained on existing code, which may have implicit biases or discriminatory patterns.</p>
                         </div>
                      </div>
                      <div class = "word-crit">
-                        <div class="step" data-step="3" style="height: 735px;" data-scrollama-index="2">
+                        <div class="step" data-step="3" style="height: 500px;" data-scrollama-index="2">
+                           <p class = "word-crit-text"><span class = "yellow">Security and privacy: </span> There are concerns about the security and privacy of the code written using Copilot. As the tool operates by analyzing and synthesizing code written by other developers, it raises concerns about who has access to the code.</p>
+                        </div>
+                     </div>
+                  </article>
+               </div>
+            </section>
+         </div>
+         <div class="row">
+            <div class = "sticky-top">
+               <div class="col-lg-6 col-lg-offset-1 " id = "outlook-intro">
+                  <div class = "text-back">
+                     <h1 class = "text-left">
+                        Outlook Email Simulation
+                     </h1>
+                  </div>
+                  <div class = "text-back">
+                     <h3 class = "text-left">
+                        By utilizing the copilot function available in Microsoft Word, you can benefit from its capabilities to write, edit, summarize, and create documents.
+                        With a simple prompt, Copilot generates an initial draft for you and incorporates relevant information from your organization. Copilot has the ability to append content to an existing document, condense text, and rephrase either sections or the entirety of a document to enhance its concision. Furthermore, Copilot can assist you in refining your writing skills by proposing strategies to fortify your arguments and eradicate any inconsistencies.
+                        <br> <br>  Although the Microsoft copilot is expected to provide exceptional versatility, it has the possibility of producing prejudiced replies due to inherent biases and prejudices in the text data that ChatGPT is trained on. Therefore, it is possible that the AI may generate biased or discriminatory responses unknowingly.
+                        For example: when it comes to using copilot and asking copilot to summarize the funding history of OpenAI
+                     </h3>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class = "row ">
+            <section id="outlook-scrolly">
+               <div class = "sticky-top">
+                  <div class = "col-lg-6 ">
+                     <figure style="height: 490px; top: 245px;" class = "fig">
+                        <div class = "chart">
+                           <img src = "pics/Outlook email.png" class="img-responsive" alt="Responsive image" id="outlook-email">
+                           <img src = "pics/co-pilot.webp" class="img-responsive" alt="Responsive image" id = "outlook-copilot">
+                           <p class = "word-text">
+                              <span id = "demo"></span>
+                              <span id = "word-bias-text"></span>
+                              <span id = "demo1"></span>
+                              <span id = "word-security-text"></span>
+                              <span id = "demo2"></span>
+                              <!-- going to be filled in with copilot text -->
+                           </p>
+                        </div>
+                     </figure>
+                  </div>
+               </div>
+               <div class = "col-lg-6">
+                  <article>
+                     <div class="step is-active" data-step="1" style="height: 500px;" data-scrollama-index="0">
+                        <div class = "word-crit">
+                           <p class = "word-crit-text">There are concerns that Copilot may perpetuate biases and inequalities in the software development industry. This is because the tool is trained on existing code, which may have implicit biases or discriminatory patterns.</p>
+                        </div>
+                     </div>
+                     <div class="step" data-step="2" style="height: 500px;" data-scrollama-index="1">
+                        <div class = "word-crit">
+                           <p class = "word-crit-text"> <mark> Bias: </mark> There are concerns that Copilot may perpetuate biases and inequalities in the software development industry. This is because the tool is trained on existing code, which may have implicit biases or discriminatory patterns.</p>
+                        </div>
+                     </div>
+                     <div class = "word-crit">
+                        <div class="step" data-step="3" style="height: 500px;" data-scrollama-index="2">
                            <p class = "word-crit-text"><span class = "yellow">Security and privacy: </span> There are concerns about the security and privacy of the code written using Copilot. As the tool operates by analyzing and synthesizing code written by other developers, it raises concerns about who has access to the code.</p>
                         </div>
                      </div>
@@ -104,102 +171,184 @@
             </section>
          </div>
          <div class = "row">
-            <div class="col-lg-8 col-lg-offset-2" id = "conclusion">
-              <div class = "text-back">
-                <h1 class = "text-left">
-                   Word Document Simulation
-                </h1>
-             </div>
-             <div class = "text-back">
-                <h3 class = "text-left">
+         <div class="col-lg-8 col-lg-offset-2" id = "conclusion">
+            <div class = "text-back">
+               <h1 class = "text-left">
+                  The Future Of CoPilot
+               </h1>
+            </div>
+            <div class = "text-back">
+               <h3 class = "text-left">
                   Currently, the co-pilot feature is solely accessible on five products owned by Microsoft. Undoubtedly, integrating a co-pilot tool in our workflow can significantly enhance our productivity, efficiency, and overall user experience. Nevertheless, there are numerous intricacies, such as design, language, and functionality that require further refinement before the tool can become fully operational.
                   Looking towards the future, advancements in Artificial Intelligence (AI), like ChatGPT, hold the potential to revolutionize our daily lives. We could potentially see a shift away from traditional text input towards more intuitive voice and AI interactions. However, until such innovations become mainstream, we should remain vigilant of potential unexpected developments beyond our current understanding.
-                </h3>
-             </div>
+               </h3>
+            </div>
          </div>
       </main>
+    
       <script>
          // using d3 for convenience
-         var main = d3.select("main");
-         var scrolly = main.select("#scrolly");
-         var figure = scrolly.select("figure");
-         var article = scrolly.select("article");
-         var step = article.selectAll(".step");
-         
-         // initialize the scrollama
-         var scroller = scrollama();
-         
-         
-         // scrollama event handlers
-         function handleStepEnter(response) {
-           console.log(response);
-           // response = { element, direction, index }
-         
-           // add color to current step only
-           step.classed("is-active", function (d, i) {
-             return i === response.index;
-           });
-         
-           // update graphic based on step
-           if(response.index == 0){
-             typeWriter();
-           }
-           else if(response.index == 1){
-             document.getElementById("word-bias-text").style.backgroundColor = "red";
-         
-           }
-           else if(response.index == 2){
-             document.getElementById("word-security-text").style.backgroundColor = "yellow";
-            // document.getElementById("wordy").style.position = "absolute";
-           }
-           figure.select("#word-doc-copilot").style("opacity", 0);
-           figure.select()
-         }
-           var i = 0;
-           var txt = 'OpenAI was founded in December 2015 with an initial funding of $1 billion from its founders, which included Elon Musk, Sam Altman, Greg Brockman, Ilya Sutskever, John Schulman, and Wojciech Zaremba.";'
-           + "In February 2018, OpenAI announced that it had raised an additional $1 billion in funding from a group of investors that included Microsoft, Reid Hoffman, and Khosla Ventures. The funding was intended to help OpenAI further its mission of advancing AI in a responsible and safe manner."; /* The text */
-           var speed = 100; /* The speed/duration of the effect in milliseconds */
-         function typeWriter() {
-             if (i < txt.length) {
-               if(i <= 50){
-                 document.getElementById("demo").innerHTML += txt.charAt(i);
-               }
-               else
-               if(i <= 70){
-                 document.getElementById("word-bias-text").innerHTML += txt.charAt(i);
-               }
-               else if(i <= 90){
-                 document.getElementById("demo1").innerHTML += txt.charAt(i);
-               }
-               else if(i <= 111){
-                 document.getElementById("word-security-text").innerHTML += txt.charAt(i);
-               }
-               else{
-                 document.getElementById("demo2").innerHTML += txt.charAt(i);
-         
-               }
-               i++;
-               setTimeout(typeWriter, speed);
-             }
-           }
-         
-         function init() {
-         
-         
-           // 2. setup the scroller passing options
-           // 		this will also initialize trigger observations
-           // 3. bind scrollama event handlers (this can be chained like below)
-           scroller
-             .setup({
-               step: "#scrolly article .step",
-               offset: 0.33,
-               debug: false
-             })
-             .onStepEnter(handleStepEnter);
-         }
-         
-         // kick things off
-         init();
+var main = d3.select("main");
+var scrolly = main.select("#scrolly");
+var figure = scrolly.select("figure");
+var article = scrolly.select("article");
+var step = article.selectAll(".step");
+
+// initialize the scrollama
+var scroller = scrollama();
+
+
+// scrollama event handlers
+function handleStepEnter(response) {
+  console.log(response);
+  // response = { element, direction, index }
+
+  // add color to current step only
+  step.classed("is-active", function (d, i) {
+    return i === response.index;
+  });
+
+  // update graphic based on step
+  if(response.index == 0){
+   document.getElementById("word-doc-copilot").style.opacity = 0;
+    typeWriter();
+  }
+  else if(response.index == 1){
+   document.getElementById("word-bias-text").style.border = "1px solid #FF0000;"
+  }
+  else if(response.index == 2){
+   console.log("hi 2");
+
+    document.getElementById("word-security-text").style.backgroundColor = "yellow";
+  }
+}
+  var i = 0;
+  var txt = 'OpenAI was founded in December 2015 with an initial funding of $1 billion from its founders, which included Elon Musk, Sam Altman, Greg Brockman, Ilya Sutskever, John Schulman, and Wojciech Zaremba.";'
+  + "In February 2018, OpenAI announced that it had raised an additional $1 billion in funding from a group of investors that included Microsoft, Reid Hoffman, and Khosla Ventures. The funding was intended to help OpenAI further its mission of advancing AI in a responsible and safe manner."; /* The text */
+  var speed = 100; /* The speed/duration of the effect in milliseconds */
+function typeWriter() {
+    if (i < txt.length) {
+      if(i <= 50){
+        document.getElementById("demo").innerHTML += txt.charAt(i);
+      }
+      else
+      if(i <= 70){
+        document.getElementById("word-bias-text").innerHTML += txt.charAt(i);
+      }
+      else if(i <= 90){
+        document.getElementById("demo1").innerHTML += txt.charAt(i);
+      }
+      else if(i <= 111){
+        document.getElementById("word-security-text").innerHTML += txt.charAt(i);
+      }
+      else{
+        document.getElementById("demo2").innerHTML += txt.charAt(i);
+
+      }
+      i++;
+      setTimeout(typeWriter, speed);
+    }
+  }
+
+function init() {
+
+
+  // 2. setup the scroller passing options
+  // 		this will also initialize trigger observations
+  // 3. bind scrollama event handlers (this can be chained like below)
+  scroller
+    .setup({
+      step: "#scrolly article .step",
+      offset: 0.33,
+      debug: false
+    })
+    .onStepEnter(handleStepEnter);
+}
+
+// kick things off
+init();
       </script>
+
+<script>
+   // using d3 for convenience
+var scrolly = d3.select("#outlook-scrolly");
+var figure = scrolly.select("figure");
+var article = scrolly.select("article");
+var step = article.selectAll(".step");
+
+// initialize the scrollama
+var scroller = scrollama();
+
+
+// scrollama event handlers
+function handleStepEnter(response) {
+console.log(response);
+// response = { element, direction, index }
+
+// add color to current step only
+step.classed("is-active", function (d, i) {
+return i === response.index;
+});
+
+// update graphic based on step
+if(response.index == 0){
+figure.select("#outlook-copilot").style("opacity", 0);
+typeWriter();
+}
+else if(response.index == 1){
+document.getElementById("word-bias-text").style.border = "1px solid #FF0000;"
+}
+else if(response.index == 2){
+console.log("hi 2");
+
+document.getElementById("word-security-text").style.backgroundColor = "yellow";
+}
+}
+var i = 0;
+var txt = 'OpenAI was founded in December 2015 with an initial funding of $1 billion from its founders, which included Elon Musk, Sam Altman, Greg Brockman, Ilya Sutskever, John Schulman, and Wojciech Zaremba.";'
++ "In February 2018, OpenAI announced that it had raised an additional $1 billion in funding from a group of investors that included Microsoft, Reid Hoffman, and Khosla Ventures. The funding was intended to help OpenAI further its mission of advancing AI in a responsible and safe manner."; /* The text */
+var speed = 100; /* The speed/duration of the effect in milliseconds */
+function typeWriter() {
+if (i < txt.length) {
+if(i <= 50){
+  document.getElementById("demo").innerHTML += txt.charAt(i);
+}
+else
+if(i <= 70){
+  document.getElementById("word-bias-text").innerHTML += txt.charAt(i);
+}
+else if(i <= 90){
+  document.getElementById("demo1").innerHTML += txt.charAt(i);
+}
+else if(i <= 111){
+  document.getElementById("word-security-text").innerHTML += txt.charAt(i);
+}
+else{
+  document.getElementById("demo2").innerHTML += txt.charAt(i);
+
+}
+i++;
+setTimeout(typeWriter, speed);
+}
+}
+
+function init() {
+
+
+// 2. setup the scroller passing options
+// 		this will also initialize trigger observations
+// 3. bind scrollama event handlers (this can be chained like below)
+scroller
+.setup({
+step: "#outlook-scrolly article .step",
+offset: 0.33,
+debug: false
+})
+.onStepEnter(handleStepEnter);
+}
+
+// kick things off
+init();
+</script>
    </body>
 </html>
