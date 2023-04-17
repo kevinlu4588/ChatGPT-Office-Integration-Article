@@ -12,7 +12,7 @@
       }
 
   h1 {
-    font: 'Playfair Display';
+    font: 'Playfair Display'!important;
         font-size: 36px;
     font-weight: bold;
     margin-bottom: 20px;
@@ -35,7 +35,7 @@
   }
   p {
     font: 'Work Sans';
-
+    max-width: 75%;
     font-size: 16px;
     color: #666666;
     margin-bottom: 30px;
@@ -45,11 +45,8 @@
 
   }
 
-.text-white{
-
-}
-
 .text-left{
+  font: 'Work Sans';
   white-space: normal;
   padding-left: 5%;
   padding-right: 5%;
