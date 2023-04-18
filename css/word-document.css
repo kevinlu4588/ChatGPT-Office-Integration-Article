@@ -25,7 +25,7 @@
 .word-crit{
     background-color: #d8b3ea;
     height: 400px;
-    width:500px;
+    width:600px;
     white-space: normal;
 
 }
@@ -47,8 +47,8 @@
  }
 
 .word-crit-text{
-    
-    padding-top: 25%;
+    font: "Work Sans";
+    padding-top: 20%;
     padding-left: 20%;
     text-align: left;
     vertical-align: middle;
@@ -83,18 +83,13 @@
     background-color: yellow;
 }
 
-mark{
-    background-color: rgb(208, 100, 100);
+.red{
+    background-color: rgb(217, 127, 127);
 }
-
-#word-bias-text{
+.marker{
     display: inline-block;
     padding: 2px 4px;
     border-radius: 5px;
-    color: black;
-    transition: background-color 3s;
-}
-#word-security-text{
     color: black;
     transition: background-color 3s;
 }

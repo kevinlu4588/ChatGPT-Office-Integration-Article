@@ -2,7 +2,8 @@
       body {
         margin: 0;
         padding: 0;
-      background-color: #9BB8CC;      
+      background-color: #9BB8CC;  
+      font-family: 'Work Sans'!important;    
     }
       .wrapper {
         display: flex;
@@ -10,7 +11,7 @@
         align-items: center;
         height: 100vh;
       }
-
+  font
   h1 {
     font: 'Playfair Display'!important;
         font-size: 36px;
@@ -25,19 +26,19 @@
   }
   h3{
     font: 'Work Sans';
-    font-size: 18px;
+    font-size: 22px;
     margin-bottom: 10px;
     }
   h4{
     font: 'Work Sans';
-    font-size: 16px;
+    font-size: 20px;
     margin-bottom: 10px;
   }
   p {
     font: 'Work Sans';
     max-width: 75%;
-    font-size: 16px;
-    color: #666666;
+    font-size: 20px;
+    color: black;
     margin-bottom: 30px;
   }
   .span{
