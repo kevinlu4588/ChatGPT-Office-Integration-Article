@@ -14,14 +14,14 @@ function articleIntro() {
   }
   
   function deleteIntro(){
-    if(j >= 0){
+    if(j >= 10){
 
         document.getElementById("intro-title").innerHTML = txt1.substring(0, j);
         j--;
         setTimeout(deleteIntro, speed1);
     }
     else{
-        setTimeout(articleIntro2, speed1);
+        setTimeout(articleIntro2, 400);
     }
   }
 

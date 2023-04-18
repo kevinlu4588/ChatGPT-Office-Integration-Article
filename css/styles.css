@@ -13,8 +13,10 @@
       }
   font
   h1 {
+    @include media-breakpoint-down(lg) {
+    }    font-size: rfs-fluid-value(1.125rem);
+
     font: 'Playfair Display'!important;
-        font-size: 36px;
     font-weight: bold;
     margin-bottom: 20px;
   }
@@ -26,7 +28,7 @@
   }
   h3{
     font: 'Work Sans';
-    font-size: 22px;
+    font-size: 20px;
     margin-bottom: 10px;
     }
   h4{
@@ -55,9 +57,12 @@
 }
 
 #conclusion{
-padding-top: 800px;
+padding-top:700px;
 padding-bottom: 100px;
 
+}
+#caption{
+  text-align: center;
 }
 
 .article-intro{

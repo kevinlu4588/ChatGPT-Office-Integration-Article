@@ -33,6 +33,10 @@
     padding-left: 50px;
 }
 
+.email-text{
+    font-size: 18px;
+}
+
 @media only screen and (max-width: 600px) {
     .crit-col{
         padding-left: 0px;
@@ -42,6 +46,9 @@
     }
 
     .outlook-text{
+        font-size: 20px;
+    }
+    .email-text{
         font-size: 10px;
     }
     
@@ -67,6 +74,7 @@
     vertical-align: middle;
 
 }
+
 
 .yellow{
     background-color: yellow;

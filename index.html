@@ -26,14 +26,14 @@
    </head>
    <body onload="articleIntro()">
       <div class="jumbotron bg-blue text-white text-center" id = "intro" style = "background: #000000">
-         <h1 id = "intro-title" class = "text-white"></h1>
+         <h1 id = "intro-title" class = "text-white display-1"></h1>
          <h3 class = "title-text">How Microsoft's New Co-pilot Poses Risks for Workspaces</h3>
       </div>
       <div class="container">
       <div class="row">
          <div class="col-lg-6 col-lg-offset-3 article-intro">
             <div class = "text-back">
-               <h1 class = "text-left">
+               <h1 class = "text-left display-2">
                   Betting the Farm on ChatGPT
                </h1>
             </div>
@@ -47,14 +47,15 @@
       </div>
       <div class = "row">
          <div class="col-lg-6 col-lg-offset-3 article-intro"  style="padding-left: 0px;  padding-right: 0px;">
-            <img src = "pics/copilot.jpg" class="img-responsive" alt="Responsive image">
+            <img src = "pics/copilot.jpg" class="img-responsive" alt="Co-pilot sample image">
+            <h4 id = "caption">Co-pilot is designed to live in Office Products as an interactive assistant</h4>
          </div>
       </div>
       <div class="row">
          <div class = "sticky-top">
             <div class="col-lg-6 col-lg-offset-3 " id = "word-intro">
                <div class = "text-back">
-                  <h1 class = "text-left">
+                  <h1 class = "text-left display-2">
                      Word Document Simulation
                   </h1>
                </div>
@@ -115,7 +116,7 @@
             <div class = "sticky-top">
                <div class="col-lg-6 col-lg-offset-3 " id = "outlook-intro">
                   <div class = "text-back">
-                     <h1 class = "text-left">
+                     <h1 class = "text-left display-2">
                         Outlook Email Simulation
                      </h1>
                   </div>
@@ -135,14 +136,14 @@
                   <div class = "col-lg-6 col-lg-offset-1 ">
                      <figure style="height: 490px; top: 245px;" class = "fig">
                         <div class = "chart">
-                           <img src = "pics/Outlooky.png" class="img-responsive" alt="Responsive image" id="outlook-email">
+                           <img src = "pics/outlook-email1.png" class="img-responsive" alt="Responsive image" id="outlook-email">
                            <img src = "pics/co-pilot.webp" class="img-responsive" alt="Responsive image" id = "outlook-copilot">
                            <p class = "outlook-text">
-                              <span id = "email1"></span>
-                              <span class = "marker" id = "outlook-i-text"></span>
-                              <span id = "email2"></span>
-                              <span class = "marker" id = "no-context-text"></span>
-                              <span id = "email3"></span>
+                              <span class = "email-text"id = "email1"></span>
+                              <span class = "marker email-text" id = "outlook-i-text"></span>
+                              <span class = "email-text"id = "email2"></span>
+                              <span class = "marker email-text" id = "no-context-text"></span>
+                              <span class = "email-text"id = "email3"></span>
                               <!-- going to be filled in with copilot text -->
                            </p>
                         </div>
@@ -158,12 +159,12 @@
                      </div>
                      <div class="step" data-step="2" style="height: 500px;" data-scrollama-index="1">
                         <div class = "word-crit">
-                           <p class = "word-crit-text"> <span class = "marker red">Lack of personalization: </span>  While an AI text generator may be able to produce grammatically correct and coherent sentences, it may lack the personal touch that comes with writing an email from scratch. This can make the email seem impersonal and robotic, potentially harming the relationship between the sender and the recipient.</p>
+                           <p class = "word-crit-text"> <span class = "marker red">Misinterpretation of context: </span>  An AI text generator may not always understand the context in which an email is being written, leading to inappropriate or confusing responses. This can cause frustration and misunderstandings between the sender and the recipient. </p>
                         </div>
                      </div>
                      <div class = "word-crit">
                         <div class="step" data-step="3" style="height: 500px;" data-scrollama-index="2">
-                           <p class = "word-crit-text"><span class = "marker yellow">Misinterpretation of context: </span>  An AI text generator may not always understand the context in which an email is being written, leading to inappropriate or confusing responses. This can cause frustration and misunderstandings between the sender and the recipient.</p>
+                           <p class = "word-crit-text"><span class = "marker yellow">Lack of personalization: </span> While an AI text generator may be able to produce grammatically correct and coherent sentences, it may lack the personal touch that comes with writing an email from scratch. This can make the email seem impersonal and robotic, potentially harming the relationship between the sender and the recipient.</p>
                         </div>
                      </div>
                   </article>
@@ -173,7 +174,7 @@
          <div class = "row">
          <div class="col-lg-6 col-lg-offset-3" id = "conclusion">
             <div class = "text-back">
-               <h1 class = "text-left">
+               <h1 class = "text-left display-2">
                   The Future Of CoPilot
                </h1>
             </div>
@@ -223,8 +224,8 @@ function handleStepEnter(response) {
   }
 }
   var i = 0;
-  var txt = 'OpenAI was founded in December 2015 with an initial funding of $1 billion from its founders, which included radical left-wingers Elon Musk, Sam Altman, Greg Brockman, Ilya Sutskever, John Schulman, and Wojciech Zaremba.'
-  + "The additional $300 billion in funding was intended to help OpenAI further its mission of advancing AI in a responsible and safe manner."; /* The text */
+  var txt = 'OpenAI was founded in December 2015 with an initial funding of $1 billion from its founders, which included radical left-wingers Elon Musk, Sam Altman, and Wojciech Zaremba.'
+  + "The additional $300 trillion in funding was intended to help OpenAI further its mission of advancing AI in a responsible and safe manner."; /* The text */
   var speed = 25; /* The speed/duration of the effect in milliseconds */
 function typeWriter() {
     if (i < txt.length) {
@@ -235,10 +236,10 @@ function typeWriter() {
       if(i <= 128){
         document.getElementById("word-bias-text").innerHTML += txt.charAt(i);
       }
-      else if(i <= 232){
+      else if(i <= 172){
         document.getElementById("demo1").innerHTML += txt.charAt(i);
       }
-      else if(i <= 246){
+      else if(i <= 200){
         document.getElementById("word-security-text").innerHTML += txt.charAt(i);
       }
       else{
