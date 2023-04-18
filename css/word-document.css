@@ -37,6 +37,14 @@
     .crit-col{
         padding-left: 0px;
     }
+    .word-crit{
+        width: 100%;
+    }
+
+    .outlook-text{
+        font-size: 10px;
+    }
+    
 }
 
 .round-corner {
@@ -76,8 +84,9 @@
     padding-left: 10%;
     word-wrap: break-word;
     width: 500px;
-    font-size: small;
+    font-size: 16px;
 }
+
 
 #bias-text{
     background-color: yellow;
