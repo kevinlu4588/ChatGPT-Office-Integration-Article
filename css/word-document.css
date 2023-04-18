@@ -44,6 +44,15 @@
     .word-crit{
         width: 100%;
     }
+    .word-crit-text{
+        font: "Work Sans";
+        padding-top: 10% !important;
+        padding-left: 10%!important;
+        padding-right: 0% !important;
+        text-align: left;
+        vertical-align: middle;
+        color: black;
+    }
 
     .outlook-text{
         font-size: 20px;
