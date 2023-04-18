@@ -311,21 +311,21 @@ document.getElementById("no-context-text").style.backgroundColor = "yellow";
 }
 }
 var k = 0;
-var txt3 = 'Hello Microsoft,' + "I hope you are doing well. I am reaching out to inquire about beta access to your new product, Copilot. I'm excited to try it out and provide feedback." + "If possible, I would greatly appreciate early access to Copilot. I understand that it's a beta version and may have bugs, but I'm willing to take the risk to help improve the product.:"+ "Thank you for your consideration.";+ "Best regards," + "[Your Name]";
+var txt3 = "Hello Microsoft, I hope you are doing well. I am reaching out to inquire about beta access to your new product, Copilot. I'm excited to try it out and provide feedback." + "If possible, I would greatly appreciate early access to Copilot. I understand that it's a beta version and may be bad, but I'm willing to take the risk to help improve the product."+ "Thank you for your consideration.";+ "Best regards," + "[Your Name]";
 var speed = 40; /* The speed/duration of the effect in milliseconds */
 function outTypeWriter() {
 if (k< txt.length) {
-if(k <= 50){
+if(k <= 43){
   document.getElementById("email1").innerHTML += txt3.charAt(k);
 }
 else
-if(k <= 70){
+if(k <= 120){
   document.getElementById("outlook-i-text").innerHTML += txt3.charAt(k);
 }
-else if(k <= 90){
+else if(k <= 232){
   document.getElementById("email2").innerHTML += txt3.charAt(k);
 }
-else if(k <= 111){
+else if(k <= 285){
    document.getElementById("no-context-text").innerHTML += txt3.charAt(k);
 }
 else{
